@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+
+
+footer{
+    
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.189);
+
+    background-color: #c87b28;
+   
+    width: 100%;
+    padding: 10px;
+    
+        
+}
+footer div{
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    font-size: 13pt; 
+    font-weight: 500;
+}
+footer div .logogit{
+    font-size: 20pt;
+    margin-right: 4px;
+}
+footer p{
+    
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    text-shadow: 2px 1px 2px rgb(0 0 0 / 18%);
+    
+}
+.social:hover{
+    
+    text-decoration: underline;
+}
+
