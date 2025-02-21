@@ -1,1 +1,1 @@
-export var ip = "192.168.1.14";
+export var ip = "192.168.1.13";

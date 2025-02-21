@@ -34,6 +34,7 @@ function Projeto({ isOpen, onClose, id, onUpdate }) {
         setMessage('Projeto atualizado!');
         onClose(); 
         onUpdate(data); 
+        window.location.reload()
       })
       .catch((erro) => console.log(erro));
   }

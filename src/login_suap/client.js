@@ -75,18 +75,14 @@ const useSuapClient = (authHost, clientID, redirectURI, scope) => {
           localStorage.removeItem('suapToken');
           localStorage.removeItem('suapScope');
           localStorage.removeItem('suapTokenExpiration');
-
-          window.location.href = '/login?logged_out=true';
         })
         .catch((error) => {
           console.error('Erro ao fazer logout:', error);
         });
     } else {
-      // Se não houver token, apenas limpar os dados e redirecionar
       localStorage.removeItem('suapToken');
       localStorage.removeItem('suapScope');
       localStorage.removeItem('suapTokenExpiration');
-      window.location.href = '/login?logged_out=true';
     }
   }, [logoutURL, clientID]);
 
