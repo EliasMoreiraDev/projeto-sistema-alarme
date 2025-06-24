@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
     const [users, setUsers] = useState([]);
 
     const clientID = 'S3uUVTw2uvD0hixw0zsrJxlNJt8aWIPXU70LhtYH';
-    const redirectURI = 'http://localhost:3000/times';
+    const redirectURI = `http://${ip}:3000/times`;
     const authHost = 'https://suap.ifro.edu.br';
     const scope = 'identificacao email documentos_pessoais';
 

@@ -11,6 +11,8 @@ import PrivateRoute from './privateRoutes'; // Certifique-se de que o caminho es
 import useSuapClient from '../login_suap/client';
 import Loading from '../components/layouts/Loading';
 import Login from '../components/pages/Login';
+import React from 'react';
+import { ip } from '../components/ip';
 
 function Rotas() {
   const [loading, setLoading] = useState(true);
@@ -18,7 +20,7 @@ function Rotas() {
   const { initToken } = useSuapClient(
     'https://suap.ifro.edu.br',
     'S3uUVTw2uvD0hixw0zsrJxlNJt8aWIPXU70LhtYH',
-    'http://localhost:3000/times',
+    `http://${ip}:3000/times`,
     'identificacao email documentos_pessoais'
   );
 

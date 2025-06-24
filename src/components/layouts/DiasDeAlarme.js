@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import styles from './DiasDeAlarme.module.css';
-
+import ip from '../ip'
 function DiasDeAlarme() {
   const [dias, setDias] = useState([]);
 
   useEffect(() => {
-    // Carregando os dados do JSON a partir da URL local
-    fetch('http://localhost:5000/diasdasemana')
+    
+    fetch(`http://${ip}:5000/diasdasemana`)
       .then((response) => response.json())
       .then((data) => setDias(data));
   }, []);
@@ -21,7 +21,7 @@ function DiasDeAlarme() {
     console.log('Estado Atualizado:', updatedDias);
 
     // Enviando os dados atualizados de volta para o servidor local (depende de sua configuração no servidor)
-    fetch(`http://localhost:5000/diasdasemana/${id}`, {
+    fetch(`http://${ip}:5000/diasdasemana/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

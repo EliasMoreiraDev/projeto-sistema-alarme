@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useSuapClient from '../../login_suap/client';  // Ajuste o caminho conforme necessário
 import Loading from '../layouts/Loading';  // Ajuste o caminho conforme necessário
-
+import ip from '../ip'
 const Login = () => {
   const navigate = useNavigate();
   const [showLoading, setShowLoading] = useState(true);  // Estado para controlar o carregamento
 
   const clientID = 'S3uUVTw2uvD0hixw0zsrJxlNJt8aWIPXU70LhtYH';
-  const redirectURI = 'http://localhost:3000/times';
+  const redirectURI = 'http://${ip}:3000/times';
   const authHost = 'https://suap.ifro.edu.br';
   const scope = 'identificacao email documentos_pessoais';
 

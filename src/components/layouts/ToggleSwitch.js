@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import styles from './ToggleSwitch.module.css';
+import ip from '../ip'
 
 function ToggleSwitch({ id }) {
   const [ativo, setAtivo] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/alarms/${id}`)
+    fetch(`http://${ip}:5000/alarms/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setAtivo(data.ativo);
@@ -17,7 +18,7 @@ function ToggleSwitch({ id }) {
 
   const handleToggle = () => {
     const novoEstado = !ativo;
-    fetch(`http://localhost:5000/alarms/${id}`, {
+    fetch(`http://${ip}:5000/alarms/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
