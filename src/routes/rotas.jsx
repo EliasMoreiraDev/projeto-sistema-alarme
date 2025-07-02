@@ -11,7 +11,6 @@ import PrivateRoute from './privateRoutes'; // Certifique-se de que o caminho es
 import useSuapClient from '../login_suap/client';
 import Loading from '../components/layouts/Loading';
 import Login from '../components/pages/Login';
-import React from 'react';
 import { ip } from '../components/ip';
 
 function Rotas() {

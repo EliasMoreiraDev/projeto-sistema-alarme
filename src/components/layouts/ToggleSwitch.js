@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './ToggleSwitch.module.css';
-import ip from '../ip'
+import {ip} from '../ip'
 
 function ToggleSwitch({ id }) {
   const [ativo, setAtivo] = useState(false);

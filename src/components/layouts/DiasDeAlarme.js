@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './DiasDeAlarme.module.css';
-import ip from '../ip'
+import {ip} from '../ip'
 function DiasDeAlarme() {
   const [dias, setDias] = useState([]);
 
